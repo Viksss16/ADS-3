@@ -1,6 +1,6 @@
 // Copyright 2021 NNTU-CS
 
-int binarySearchCount(int *arr, int size, int value) {
+int cbinsearch(int *arr, int size, int value) {
     int count = 0;
     int left = 0;
     int right = size - 1;
@@ -19,11 +19,9 @@ int binarySearchCount(int *arr, int size, int value) {
                 temp++;
             }
             return count;
-        }
-        else if (arr[mid] < value) {
+        } else if (arr[mid] < value) {
             left = mid + 1;
-        }
-        else {
+        } else {
             right = mid - 1;
         }
     }
